@@ -295,13 +295,15 @@ function Index() {
         </div>
       </section>
 
+      <GraffitiBand />
+
       {/* ARTISTS */}
-      <section id="artists" className="relative bg-asphalt py-24 sm:py-32">
+      <section id="artists" className="relative bg-asphalt py-24 sm:py-32 texture-grain">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-14">
             <span className="font-mono text-xs uppercase tracking-[0.3em] text-blood">// 002 — the roster</span>
-            <h2 className="mt-3 font-display text-7xl leading-none text-bone sm:text-9xl">
-              THE <span className="text-blood">CREW</span>
+            <h2 className="mt-3 font-heavy text-7xl leading-[0.82] text-bone sm:text-[10rem]">
+              THE <span className="font-bungee text-blood">CREW</span>
             </h2>
             <p className="mt-4 max-w-xl font-body uppercase tracking-wider text-dirty">
               Three names. Three styles. One studio. Album covers, not headshots.
@@ -343,10 +345,10 @@ function Index() {
           <div className="relative z-10 mx-auto flex h-full max-w-7xl items-center px-4 sm:px-6">
             <div className="max-w-2xl">
               <span className="font-mono text-xs uppercase tracking-[0.3em] text-acid">// 003 — the lifestyle</span>
-              <h2 className="mt-3 font-display text-[16vw] leading-[0.85] text-bone sm:text-[10rem] md:text-[12rem]">
+              <h2 className="mt-3 font-heavy text-[16vw] leading-[0.82] text-bone sm:text-[10rem] md:text-[13rem] [text-shadow:5px_5px_0_var(--blood)]">
                 RIDE.<br />
-                <span className="text-blood">CREATE.</span><br />
-                INK.
+                <span className="font-bungee-inline text-blood [text-shadow:none]">CREATE.</span><br />
+                <span className="font-bungee-shade text-acid [text-shadow:none]">INK.</span>
               </h2>
               <p className="mt-6 max-w-md font-body text-lg uppercase tracking-wider text-dirty">
                 Chrome, leather, ink under the skin. We don't tattoo bikers — we are bikers tattooing the rest of Delhi.
@@ -360,25 +362,25 @@ function Index() {
       </section>
 
       {/* SERVICES */}
-      <section id="services" className="texture-concrete texture-grain relative py-24 sm:py-32">
+      <section id="services" className="texture-concrete texture-grain texture-scratch relative py-24 sm:py-32">
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-14">
             <span className="font-mono text-xs uppercase tracking-[0.3em] text-blood">// 004 — the menu</span>
-            <h2 className="mt-3 font-display text-7xl leading-none text-bone sm:text-9xl">
-              WHAT WE <span className="text-acid">DO</span>
+            <h2 className="mt-3 font-heavy text-7xl leading-[0.82] text-bone sm:text-[10rem]">
+              WHAT WE <span className="font-bungee-shade text-acid">DO</span>
             </h2>
           </div>
 
-          <ul className="grid grid-cols-2 gap-[2px] border-2 border-bone bg-bone sm:grid-cols-3">
+          <ul className="grid grid-cols-2 gap-[3px] border-4 border-bone bg-bone sm:grid-cols-3">
             {SERVICES.map((s, i) => (
               <li
                 key={s}
                 className="group relative aspect-square overflow-hidden bg-charcoal p-5 transition-colors hover:bg-blood"
               >
-                <div className="font-mono text-xs tracking-widest text-blood group-hover:text-bone">
+                <div className="font-bungee text-sm tracking-widest text-blood group-hover:text-bone">
                   0{i + 1}
                 </div>
-                <div className="absolute bottom-5 left-5 right-5 font-display text-3xl leading-none text-bone sm:text-4xl md:text-5xl">
+                <div className="absolute bottom-5 left-5 right-5 font-heavy uppercase text-3xl leading-[0.85] text-bone sm:text-4xl md:text-5xl">
                   {s}
                 </div>
                 <div className="absolute right-4 top-4 opacity-0 transition-opacity group-hover:opacity-100">
@@ -391,13 +393,13 @@ function Index() {
       </section>
 
       {/* REVIEWS */}
-      <section className="bg-asphalt py-24 sm:py-32">
+      <section className="bg-asphalt py-24 sm:py-32 texture-grain">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-14 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <span className="font-mono text-xs uppercase tracking-[0.3em] text-blood">// 005 — the word</span>
-              <h2 className="mt-3 font-display text-7xl leading-none text-bone sm:text-9xl">
-                ON THE <span className="text-blood">STREET</span>
+              <h2 className="mt-3 font-heavy text-7xl leading-[0.82] text-bone sm:text-[10rem]">
+                ON THE <span className="font-bungee-inline text-blood">STREET</span>
               </h2>
             </div>
             <div className="flex items-center gap-3">
@@ -431,13 +433,14 @@ function Index() {
       </section>
 
       {/* BOOKING */}
-      <section id="book" className="relative bg-blood py-24 sm:py-32">
+      <section id="book" className="relative bg-blood py-24 sm:py-32 texture-grain">
         <div className="absolute inset-0 opacity-20 mix-blend-multiply" style={{ backgroundImage: "var(--grain)" }} />
+        <div className="pointer-events-none absolute inset-0 opacity-[0.08] texture-halftone" />
         <div className="relative mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 md:grid-cols-2">
           <div>
             <span className="font-mono text-xs uppercase tracking-[0.3em] text-asphalt">// 006 — the consultation</span>
-            <h2 className="mt-3 font-display text-7xl leading-none text-bone sm:text-9xl">
-              BOOK<br />A SESSION.
+            <h2 className="mt-3 font-heavy text-7xl leading-[0.82] text-bone sm:text-[10rem] [text-shadow:6px_6px_0_var(--asphalt)]">
+              BOOK<br /><span className="font-bungee-shade">A SESSION.</span>
             </h2>
             <p className="mt-6 max-w-md font-body text-lg uppercase tracking-wider text-bone/80">
               Drop the details. We'll hit you back with a quote, an artist match and a slot at the shop.
