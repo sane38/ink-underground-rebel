@@ -141,17 +141,47 @@ function Nav() {
 }
 
 function Marquee() {
-  const items = ["INK YOUR IDENTITY", "★", "SOUTH DELHI", "★", "EST. STREET", "★", "WALK-INS WELCOME", "★", "RIDE · CREATE · INK", "★"];
+  const items = ["INK YOUR IDENTITY", "✦", "SOUTH DELHI", "✦", "STREET STREET STREET", "✦", "WALK-INS WELCOME", "✦", "RIDE · CREATE · INK", "✦", "NU SKOOL ON TOP", "✦"];
   return (
-    <div className="overflow-hidden border-y-2 border-acid bg-acid py-3">
+    <div className="overflow-hidden border-y-4 border-asphalt bg-acid py-4">
       <div className="flex animate-[marquee-scroll_28s_linear_infinite] whitespace-nowrap">
         {[...Array(2)].map((_, k) => (
-          <div key={k} className="flex shrink-0 items-center gap-8 px-4 font-display text-2xl tracking-[0.2em] text-asphalt">
+          <div key={k} className="flex shrink-0 items-center gap-8 px-4 font-bungee text-3xl tracking-[0.1em] text-asphalt">
             {items.map((i, idx) => (
               <span key={`${k}-${idx}`}>{i}</span>
             ))}
           </div>
         ))}
+      </div>
+    </div>
+  );
+}
+
+function GraffitiBand() {
+  return (
+    <div
+      className="relative h-32 sm:h-44 border-y-4 border-asphalt overflow-hidden"
+      style={{
+        backgroundImage: `linear-gradient(rgba(15,15,18,0.55), rgba(15,15,18,0.55)), url(${graffitiWall})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      <div className="absolute inset-0 flex items-center">
+        <div className="flex animate-[marquee-scroll_35s_linear_infinite] whitespace-nowrap">
+          {[...Array(2)].map((_, k) => (
+            <div key={k} className="flex shrink-0 items-center gap-10 px-6">
+              {["NU SKOOL", "★", "TATTOOS", "★", "CR PARK", "★", "DELHI", "★"].map((t, i) => (
+                <span
+                  key={`${k}-${i}`}
+                  className="font-bungee-shade text-6xl sm:text-8xl text-acid spray-drip"
+                >
+                  {t}
+                </span>
+              ))}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
@@ -176,10 +206,12 @@ function Index() {
               <span className="tape-strip">EST · CR PARK · GK 4</span>
               <span className="font-mono text-xs uppercase tracking-[0.3em] text-chrome">// best tattoo studio · south delhi</span>
             </div>
-            <h1 className="font-display text-[18vw] leading-[0.82] text-bone sm:text-[14vw] md:text-[11rem] lg:text-[14rem]">
+            <h1 className="font-heavy text-[20vw] leading-[0.82] text-bone sm:text-[15vw] md:text-[12rem] lg:text-[15rem] [text-shadow:6px_6px_0_rgba(0,0,0,0.65)]">
               INK YOUR
               <br />
-              <span className="text-blood [text-shadow:6px_6px_0_rgba(0,0,0,0.6)]">IDENTITY</span>
+              <span className="font-bungee-inline text-blood [text-shadow:8px_8px_0_var(--asphalt),12px_12px_0_var(--acid)]">
+                IDENTITY
+              </span>
             </h1>
             <p className="mt-8 max-w-xl font-body text-lg uppercase tracking-wider text-dirty sm:text-xl">
               Street culture. Personal stories. <span className="text-acid">Permanent art.</span>
@@ -217,22 +249,24 @@ function Index() {
       <Marquee />
 
       {/* GALLERY */}
-      <section id="gallery" className="relative texture-concrete texture-grain py-24 sm:py-32">
+      <section id="gallery" className="relative texture-concrete texture-grain texture-scratch py-24 sm:py-32">
+        <div className="pointer-events-none absolute inset-0 opacity-[0.06] texture-halftone" />
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-14 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <span className="font-mono text-xs uppercase tracking-[0.3em] text-blood">// 001 — the flash wall</span>
-              <h2 className="mt-3 font-display text-7xl leading-none text-bone sm:text-9xl">
-                THE <span className="text-acid">GALLERY</span>
+              <h2 className="mt-3 font-heavy text-7xl leading-[0.82] text-bone sm:text-[10rem]">
+                THE <span className="font-bungee-shade text-acid">FLASH</span><br/>
+                <span className="font-bungee-inline text-stroke">WALL</span>
               </h2>
               <p className="mt-4 max-w-xl font-body uppercase tracking-wider text-dirty">
-                Every piece. Every style. Pulled straight off the studio walls — like a torn-down flash sheet from the back alleys.
+                15+ pieces. Every style. Pulled straight off the studio walls — torn-down flash sheets from back alleys.
               </p>
             </div>
             <div className="font-graf text-2xl text-acid rotate-[-4deg]">scroll · slow ↓</div>
           </div>
 
-          <div className="grid auto-rows-[180px] grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4">
+          <div className="grid auto-rows-[170px] grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4">
             {GALLERY.map((g) => (
               <figure
                 key={g.num}
