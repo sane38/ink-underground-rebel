@@ -18,9 +18,13 @@ import tatNeck from "@/assets/tat-neck.jpg";
 import tatHand from "@/assets/tat-hand.jpg";
 import tatLeg from "@/assets/tat-leg.jpg";
 import graffitiWall from "@/assets/graffiti-wall.jpg";
-import artist1 from "@/assets/artist-1.jpg";
-import artist2 from "@/assets/artist-2.jpg";
-import artist3 from "@/assets/artist-3.jpg";
+import akshitAsset from "@/assets/artists/akshit.jpeg.asset.json";
+import chintuAsset from "@/assets/artists/chintu.png.asset.json";
+import mumbaAsset from "@/assets/artists/mumba.jpeg.asset.json";
+import sahebAsset from "@/assets/artists/saheb.jpeg.asset.json";
+import sarthakAsset from "@/assets/artists/sarthak.png.asset.json";
+import vishalAsset from "@/assets/artists/vishal.png.asset.json";
+import sohaibAsset from "@/assets/artists/sohaib.jpeg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -63,9 +67,18 @@ const GALLERY = [
 ];
 
 const ARTISTS = [
-  { img: artist1, name: "RAJA INK", style: "Realism / Portrait", spec: "Black & Grey master, 12+ yrs in the game." },
-  { img: artist2, name: "KALI", style: "Blackwork / Geometric", spec: "Ornamental, dotwork, sacred patterns." },
-  { img: artist3, name: "VINNY 'CHROME'", style: "Japanese / Sleeves", spec: "Full traditional irezumi & biker flash." },
+  { img: akshitAsset.url, name: "AKSHIT", style: "Founder / Realism", spec: "Head honcho. Black & grey, portraits, full sleeves." },
+  { img: chintuAsset.url, name: "CHINTU", style: "Fine Line / Script", spec: "Single needle precision. Lettering & micro work." },
+  { img: mumbaAsset.url, name: "MUMBA", style: "Ornamental / Mandala", spec: "Geometric mandalas, dotwork, sacred patterns." },
+  { img: sahebAsset.url, name: "SAHEB", style: "Traditional / Bold", spec: "Old school flash, bold lines, biker culture." },
+  { img: sarthakAsset.url, name: "SARTHAK", style: "Blackwork / Illustrative", spec: "Heavy black, dark illustrative, neo-traditional." },
+  { img: vishalAsset.url, name: "VISHAL", style: "Japanese / Color", spec: "Irezumi, color realism, full back pieces." },
+  { img: sohaibAsset.url, name: "SOHAIB", style: "Lettering / Graffiti", spec: "Streetwear, graffiti scripts, knuckle tats." },
+];
+
+const COLLABS = [
+  { name: "MOKO", tag: "STREETWEAR", note: "Capsule drops · co-branded flash" },
+  { name: "ORNIX", tag: "RIDER GEAR", note: "Helmet wraps · leather custom" },
 ];
 
 const SERVICES = [
