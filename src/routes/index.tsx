@@ -614,12 +614,32 @@ function Index() {
               >
                 WhatsApp →
               </a>
+              <a
+                href={STUDIO_IG}
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label="NU SKOOL TATTOOS on Instagram"
+                className="mt-3 ml-2 inline-flex items-center gap-2 border-2 border-bone px-4 py-2 font-heavy uppercase tracking-widest text-sm text-bone hover:bg-blood hover:border-acid transition-all duration-300 hover:-translate-y-0.5"
+              >
+                <IgIcon className="h-4 w-4" /> Instagram
+              </a>
             </div>
           </div>
 
           <div className="mt-16 flex flex-col items-start justify-between gap-4 border-t border-bone/15 pt-6 font-mono text-[10px] uppercase tracking-widest text-dirty sm:flex-row sm:items-center">
             <div>© {new Date().getFullYear()} NU SKOOL TATTOOS · ALL RIGHTS INKED</div>
-            <div className="text-blood">INK YOUR IDENTITY ✦ CR PARK · DELHI</div>
+            <div className="flex items-center gap-3">
+              <a
+                href={STUDIO_IG}
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label="Instagram"
+                className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-bone/40 text-bone hover:text-acid hover:border-acid transition-colors"
+              >
+                <IgIcon className="h-4 w-4" />
+              </a>
+              <span className="text-blood">INK YOUR IDENTITY ✦ CR PARK · DELHI</span>
+            </div>
           </div>
         </div>
       </footer>
