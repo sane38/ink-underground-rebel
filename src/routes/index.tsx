@@ -550,14 +550,15 @@ function Index() {
       </section>
 
       {/* BOOKING */}
-      <section id="book" className="relative bg-blood py-24 sm:py-32 texture-grain">
+      <section id="book" className="relative overflow-hidden bg-blood py-20 sm:py-28 texture-grain">
         <div className="absolute inset-0 opacity-20 mix-blend-multiply" style={{ backgroundImage: "var(--grain)" }} />
         <div className="pointer-events-none absolute inset-0 opacity-[0.08] texture-halftone" />
-        <div className="relative mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 md:grid-cols-2">
-          <div>
+        <div className="relative mx-auto grid max-w-7xl gap-10 md:gap-12 px-4 sm:px-6 md:grid-cols-2">
+          <div className="min-w-0">
             <span className="font-mono text-xs uppercase tracking-[0.3em] text-asphalt">// 006 — the consultation</span>
-            <h2 className="mt-3 font-heavy text-7xl leading-[0.82] text-bone sm:text-[10rem] [text-shadow:6px_6px_0_var(--asphalt)]">
-              BOOK<br /><span className="font-bungee-shade">A SESSION.</span>
+            <h2 className="mt-3 font-heavy leading-[0.85] text-bone [text-shadow:4px_4px_0_var(--asphalt)] text-5xl sm:text-7xl md:text-8xl lg:text-9xl break-words">
+              BOOK<br />
+              <span className="font-bungee-shade">A SESSION.</span>
             </h2>
             <p className="mt-6 max-w-md font-body text-lg uppercase tracking-wider text-bone/80">
               Drop the details. We'll hit you back with a quote, an artist match and a slot at the shop.
