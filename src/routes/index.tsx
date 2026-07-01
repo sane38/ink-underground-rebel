@@ -388,48 +388,61 @@ function Index() {
         </div>
       </section>
 
-      {/* COLLAB BAND */}
-      <section id="collab" className="relative overflow-hidden border-y-4 border-bone bg-asphalt py-20 texture-grain">
+      {/* BRAND COLLABORATIONS */}
+      <section id="collab" className="relative overflow-hidden border-y-4 border-bone bg-asphalt py-20 sm:py-24 texture-grain">
         <div className="pointer-events-none absolute inset-0 opacity-[0.08] texture-halftone" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between mb-10">
+          <div className="mb-12 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
             <div>
-              <span className="font-mono text-xs uppercase tracking-[0.3em] text-acid">// collab × the streets</span>
-              <h2 className="mt-2 font-heavy text-5xl leading-[0.85] text-bone sm:text-7xl">
-                IN BED WITH <span className="font-bungee-shade text-blood">THE BRANDS</span>
+              <span className="font-mono text-xs uppercase tracking-[0.3em] text-acid">// official partners</span>
+              <h2 className="mt-2 font-heavy text-5xl leading-[0.85] text-bone sm:text-7xl md:text-8xl">
+                BRAND <span className="font-bungee-shade text-blood">COLLABORATIONS</span>
               </h2>
+              <p className="mt-4 max-w-xl font-body uppercase tracking-wider text-dirty text-sm">
+                Co-signed by the brands we ride with.
+              </p>
             </div>
-            <div className="font-graf text-2xl text-acid rotate-[-3deg]">official partners ↓</div>
+            <div className="font-graf text-2xl text-acid rotate-[-3deg]">co-signed ↓</div>
           </div>
 
-          <div className="grid gap-5 md:grid-cols-2">
+          <div className="grid gap-6 md:grid-cols-2">
             {COLLABS.map((c, i) => (
-              <a
+              <article
                 key={c.name}
-                href="#book"
-                className={`group relative overflow-hidden border-2 border-bone bg-charcoal p-7 sm:p-10 transition-all hover:-translate-y-1 ${
-                  i === 1 ? "md:translate-y-6" : ""
+                className={`group relative overflow-hidden border-2 border-bone bg-charcoal p-7 sm:p-10 transition-all duration-300 hover:-translate-y-1.5 ${
+                  i === 1 ? "md:translate-y-4" : ""
                 }`}
                 style={{ boxShadow: i === 0 ? "8px 8px 0 var(--blood)" : "8px 8px 0 var(--acid)" }}
               >
                 <div className="pointer-events-none absolute inset-0 opacity-[0.12] texture-halftone" />
-                <div className="relative z-10 flex items-center justify-between gap-6">
-                  <div>
+                <div className="relative z-10 flex flex-col sm:flex-row sm:items-center gap-6">
+                  <div className="shrink-0 h-28 w-28 sm:h-32 sm:w-32 rounded-full overflow-hidden border-2 border-bone bg-asphalt ring-2 ring-acid/40 transition-transform duration-500 group-hover:scale-105 group-hover:rotate-3">
+                    <img
+                      src={c.logo}
+                      alt={`${c.name} logo`}
+                      loading="lazy"
+                      decoding="async"
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
+                  <div className="min-w-0 flex-1">
                     <div className="font-mono text-[10px] tracking-[0.3em] text-acid uppercase">collab № 00{i + 1}</div>
-                    <div className="mt-2 font-bungee-inline text-6xl sm:text-8xl chrome-text leading-none">
+                    <div className="mt-2 font-bungee-inline text-4xl sm:text-5xl chrome-text leading-none">
                       {c.name}
                     </div>
                     <div className="mt-3 sticker text-[10px]">{c.tag}</div>
-                    <p className="mt-4 font-body uppercase tracking-wider text-dirty text-sm">{c.note}</p>
-                  </div>
-                  <div className="hidden sm:flex flex-col items-end gap-2">
-                    <div className="chrome-bg px-3 py-1 font-heavy text-xs uppercase tracking-widest border-2 border-asphalt">
-                      × NU SKOOL
-                    </div>
-                    <div className="font-graf text-3xl text-blood rotate-[8deg]">⚡</div>
+                    <p className="mt-4 font-body uppercase tracking-wider text-dirty text-sm leading-snug">{c.note}</p>
+                    <a
+                      href={c.url}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      className="label-tag label-tag-hover mt-5 !bg-blood !text-bone !border-bone text-xs"
+                    >
+                      ◤ Visit →
+                    </a>
                   </div>
                 </div>
-              </a>
+              </article>
             ))}
           </div>
         </div>
@@ -471,20 +484,24 @@ function Index() {
             </h2>
           </div>
 
-          <ul className="grid grid-cols-2 gap-[3px] border-4 border-bone bg-bone sm:grid-cols-3">
+          <ul className="divide-y-2 divide-bone/15 border-y-2 border-bone/25">
             {SERVICES.map((s, i) => (
               <li
-                key={s}
-                className="group relative aspect-square overflow-hidden bg-charcoal p-5 transition-colors hover:bg-blood"
+                key={s.name}
+                className="group grid grid-cols-12 items-baseline gap-4 py-6 sm:py-8 transition-colors"
               >
-                <div className="font-bungee text-sm tracking-widest text-blood group-hover:text-bone">
+                <div className="col-span-2 sm:col-span-1 font-mono text-xs tracking-widest text-blood pt-2">
                   0{i + 1}
                 </div>
-                <div className="absolute bottom-5 left-5 right-5 font-heavy uppercase text-3xl leading-[0.85] text-bone sm:text-4xl md:text-5xl">
-                  {s}
+                <div className="col-span-10 sm:col-span-6">
+                  <h3 className="font-bungee text-3xl sm:text-5xl md:text-6xl leading-[0.9] text-bone group-hover:text-acid transition-colors [text-shadow:3px_3px_0_var(--blood)]">
+                    {s.name}
+                  </h3>
                 </div>
-                <div className="absolute right-4 top-4 opacity-0 transition-opacity group-hover:opacity-100">
-                  <span className="font-graf text-2xl text-acid">→</span>
+                <div className="col-span-12 sm:col-span-5 sm:pl-6 sm:border-l-2 sm:border-bone/20">
+                  <p className="font-body uppercase tracking-wider text-dirty text-sm sm:text-base leading-snug">
+                    {s.desc}
+                  </p>
                 </div>
               </li>
             ))}
