@@ -20,6 +20,8 @@ import workDragonWing from "@/assets/work/work-dragon-wing.jpeg.asset.json";
 import workLotus from "@/assets/work/work-lotus.jpeg.asset.json";
 import workDragonYy from "@/assets/work/work-dragon-yinyang.jpeg.asset.json";
 import workCross from "@/assets/work/work-cross.jpeg.asset.json";
+import mokoLogo from "@/assets/collabs/moko.jpeg.asset.json";
+import ornixLogo from "@/assets/collabs/ornix.jpeg.asset.json";
 
 const STUDIO_IG = "https://www.instagram.com/nu_skool_tattoos?igsh=MXUybnJtNHIwcXBiNQ==";
 
@@ -79,20 +81,31 @@ const ARTISTS = [
 ];
 
 const COLLABS = [
-  { name: "MOKO", tag: "STREETWEAR", note: "Capsule drops · co-branded flash" },
-  { name: "ORNIX", tag: "RIDER GEAR", note: "Helmet wraps · leather custom" },
+  {
+    name: "MOKO",
+    tag: "TATTOO AFTERCARE",
+    note: "Official aftercare partner · balm, wash & healing kits.",
+    logo: mokoLogo.url,
+    url: "https://mokocare.com/",
+  },
+  {
+    name: "ORNIX",
+    tag: "JEWELRY / PIERCING",
+    note: "Premium piercing jewelry · adorn your edge.",
+    logo: ornixLogo.url,
+    url: "https://www.instagram.com/ornixx.jewels",
+  },
 ];
 
 const SERVICES = [
-  "Custom Tattoos",
-  "Lettering",
-  "Realism",
-  "Blackwork",
-  "Fine Line",
-  "Japanese",
-  "Piercing",
-  "Cover Ups",
-  "Aftercare",
+  { name: "Custom Tattoos", desc: "One-of-one designs built around your story, drawn from scratch by the crew." },
+  { name: "Fine Line Tattoos", desc: "Single-needle precision. Delicate script, micro portraits, minimal linework." },
+  { name: "Black & Grey", desc: "Smooth gradients, deep shadows, realism and portrait work in classic B&G." },
+  { name: "Color Tattoos", desc: "Bold saturated palettes — neo-traditional, Japanese and illustrative color." },
+  { name: "Cover Ups", desc: "Transforming old ink into fresh art. Bring the regret, leave with a masterpiece." },
+  { name: "Tattoo Consultation", desc: "Sit-down sessions to shape the concept, placement, size and artist match." },
+  { name: "Piercing", desc: "Sterile, single-use setups. Ears, nose, septum, body — premium jewelry included." },
+  { name: "Aftercare Guidance", desc: "Full healing playbook + Moko-partnered products so the ink lands right." },
 ];
 
 const REVIEWS = [
