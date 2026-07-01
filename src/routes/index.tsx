@@ -331,13 +331,20 @@ function Index() {
             {ARTISTS.map((a, i) => (
               <article
                 key={a.name}
-                className={`group relative overflow-hidden border-2 border-bone bg-charcoal transition-transform duration-300 hover:-translate-y-1 hover:rotate-[-0.6deg] ${
+                className={`group relative overflow-hidden rounded-md border-2 border-bone bg-charcoal transition-all duration-300 hover:-translate-y-1.5 hover:rotate-[-0.6deg] hover:shadow-[10px_10px_0_var(--blood)] ${
                   i % 3 === 1 ? "lg:translate-y-6" : i % 3 === 2 ? "lg:-translate-y-3" : ""
                 }`}
                 style={{ boxShadow: i % 2 === 0 ? "6px 6px 0 var(--blood)" : "6px 6px 0 var(--acid)" }}
               >
                 <div className="relative aspect-[3/4] overflow-hidden">
-                  <img src={a.img} alt={a.name} loading="lazy" className="h-full w-full object-cover grayscale-[30%] transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105" />
+                  <img
+                    src={a.img}
+                    alt={a.name}
+                    loading="lazy"
+                    decoding="async"
+                    className="h-full w-full object-cover object-top scale-[1.05] transition-transform duration-700 group-hover:scale-[1.12]"
+                    style={{ filter: "contrast(1.06) saturate(1.05) brightness(1.02)" }}
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-asphalt via-asphalt/30 to-transparent" />
                   <div className="absolute left-3 top-3 sticker text-[10px] -rotate-3">NU SKOOL CREW</div>
                   <div className="absolute right-3 top-3 font-mono text-[10px] tracking-widest text-acid bg-asphalt/80 px-2 py-1 border border-acid/60">
@@ -347,9 +354,20 @@ function Index() {
                     <div className="font-bungee text-3xl text-bone leading-none [text-shadow:3px_3px_0_var(--blood)]">{a.name}</div>
                   </div>
                 </div>
-                <div className="p-4 border-t-2 border-bone bg-asphalt">
-                  <div className="font-mono text-[10px] uppercase tracking-widest text-acid">▸ {a.style}</div>
-                  <p className="mt-2 font-body text-sm text-dirty uppercase tracking-wide leading-snug">{a.spec}</p>
+                <div className="p-4 border-t-2 border-bone bg-asphalt flex items-start justify-between gap-3">
+                  <div className="min-w-0">
+                    <div className="font-mono text-[10px] uppercase tracking-widest text-acid">▸ {a.style}</div>
+                    <p className="mt-2 font-body text-sm text-dirty uppercase tracking-wide leading-snug">{a.spec}</p>
+                  </div>
+                  <a
+                    href={a.ig}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    aria-label={`${a.name} on Instagram`}
+                    className="shrink-0 inline-flex h-10 w-10 items-center justify-center rounded-full border-2 border-bone text-bone bg-asphalt transition-all duration-300 hover:bg-blood hover:border-acid hover:text-bone hover:scale-110 hover:-rotate-6"
+                  >
+                    <IgIcon className="h-5 w-5" />
+                  </a>
                 </div>
               </article>
             ))}
