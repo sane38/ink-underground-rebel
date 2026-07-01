@@ -281,17 +281,19 @@ function Index() {
             <div className="font-graf text-2xl text-acid rotate-[-4deg]">scroll · slow ↓</div>
           </div>
 
-          <div className="grid auto-rows-[170px] grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4">
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-5">
             {GALLERY.map((g) => (
               <figure
                 key={g.num}
-                className={`group relative overflow-hidden border-2 border-asphalt bg-charcoal ${g.span}`}
+                className="group relative overflow-hidden rounded-md border-2 border-asphalt bg-charcoal aspect-[3/4] shadow-[6px_6px_0_var(--asphalt)] hover:shadow-[8px_8px_0_var(--blood)] transition-shadow"
               >
                 <img
                   src={g.src}
                   alt={`${g.cat} tattoo by NU SKOOL`}
                   loading="lazy"
-                  className="h-full w-full object-cover grayscale-[40%] transition-all duration-500 group-hover:grayscale-0 group-hover:scale-105"
+                  decoding="async"
+                  className="h-full w-full object-cover scale-[1.12] transition-transform duration-700 ease-out group-hover:scale-[1.22]"
+                  style={{ filter: "contrast(1.08) saturate(1.05) brightness(1.02)" }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-asphalt/95 via-asphalt/10 to-transparent" />
                 <figcaption className="absolute inset-0 flex flex-col justify-between p-3 sm:p-4">
