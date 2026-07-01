@@ -2,21 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import logoAsset from "@/assets/nuskool-logo.asset.json";
 import heroImg from "@/assets/hero-tattoo.jpg";
 import bikerImg from "@/assets/biker.jpg";
-import tatRealism from "@/assets/tat-realism.jpg";
-import tatBlackwork from "@/assets/tat-blackwork.jpg";
-import tatFineline from "@/assets/tat-fineline.jpg";
-import tatJapanese from "@/assets/tat-japanese.jpg";
-import tatPortrait from "@/assets/tat-portrait.jpg";
-import tatGeometric from "@/assets/tat-geometric.jpg";
-import tatSleeve from "@/assets/tat-sleeve.jpg";
-import tatMinimal from "@/assets/tat-minimal.jpg";
-import tatCoverup from "@/assets/tat-coverup.jpg";
-import tatLettering from "@/assets/tat-lettering.jpg";
-import tatSkull from "@/assets/tat-skull.jpg";
-import tatChest from "@/assets/tat-chest.jpg";
-import tatNeck from "@/assets/tat-neck.jpg";
-import tatHand from "@/assets/tat-hand.jpg";
-import tatLeg from "@/assets/tat-leg.jpg";
 import graffitiWall from "@/assets/graffiti-wall.jpg";
 import akshitAsset from "@/assets/artists/akshit.jpeg.asset.json";
 import chintuAsset from "@/assets/artists/chintu.png.asset.json";
@@ -25,6 +10,28 @@ import sahebAsset from "@/assets/artists/saheb.jpeg.asset.json";
 import sarthakAsset from "@/assets/artists/sarthak.png.asset.json";
 import vishalAsset from "@/assets/artists/vishal.png.asset.json";
 import sohaibAsset from "@/assets/artists/sohaib.jpeg.asset.json";
+import workSkull from "@/assets/work/work-skull.jpeg.asset.json";
+import workSamurai from "@/assets/work/work-samurai.jpeg.asset.json";
+import workPagoda from "@/assets/work/work-pagoda.jpeg.asset.json";
+import workWheel from "@/assets/work/work-wheel.jpeg.asset.json";
+import workBallerina from "@/assets/work/work-ballerina.jpeg.asset.json";
+import workCompass from "@/assets/work/work-compass.jpeg.asset.json";
+import workDragonWing from "@/assets/work/work-dragon-wing.jpeg.asset.json";
+import workLotus from "@/assets/work/work-lotus.jpeg.asset.json";
+import workDragonYy from "@/assets/work/work-dragon-yinyang.jpeg.asset.json";
+import workCross from "@/assets/work/work-cross.jpeg.asset.json";
+
+const STUDIO_IG = "https://www.instagram.com/nu_skool_tattoos?igsh=MXUybnJtNHIwcXBiNQ==";
+
+function IgIcon({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
+      <rect x="3" y="3" width="18" height="18" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -49,31 +56,26 @@ export const Route = createFileRoute("/")({
 });
 
 const GALLERY = [
-  { src: tatRealism, cat: "Realism", num: "01", span: "row-span-2" },
-  { src: tatJapanese, cat: "Japanese", num: "02", span: "row-span-2" },
-  { src: tatBlackwork, cat: "Blackwork", num: "03", span: "" },
-  { src: tatFineline, cat: "Fine Line", num: "04", span: "row-span-2" },
-  { src: tatPortrait, cat: "Portrait", num: "05", span: "" },
-  { src: tatGeometric, cat: "Geometric", num: "06", span: "" },
-  { src: tatSleeve, cat: "Sleeves", num: "07", span: "row-span-2" },
-  { src: tatMinimal, cat: "Minimal", num: "08", span: "" },
-  { src: tatCoverup, cat: "Cover Ups", num: "09", span: "" },
-  { src: tatLettering, cat: "Lettering", num: "10", span: "row-span-2" },
-  { src: tatSkull, cat: "Knuckles", num: "11", span: "" },
-  { src: tatChest, cat: "Chest Piece", num: "12", span: "" },
-  { src: tatNeck, cat: "Neck", num: "13", span: "" },
-  { src: tatHand, cat: "Mandala", num: "14", span: "row-span-2" },
-  { src: tatLeg, cat: "Traditional", num: "15", span: "" },
+  { src: workSkull.url, cat: "Reaper & Serpent", num: "01" },
+  { src: workSamurai.url, cat: "Samurai Sleeve", num: "02" },
+  { src: workPagoda.url, cat: "Pagoda / Japanese", num: "03" },
+  { src: workWheel.url, cat: "Dharma Wheel", num: "04" },
+  { src: workCompass.url, cat: "Compass & World", num: "05" },
+  { src: workDragonYy.url, cat: "Dragon & Yin Yang", num: "06" },
+  { src: workDragonWing.url, cat: "Fine Line Dragon", num: "07" },
+  { src: workCross.url, cat: "Gothic Cross", num: "08" },
+  { src: workBallerina.url, cat: "Ink Silhouette", num: "09" },
+  { src: workLotus.url, cat: "Fine Line Lotus", num: "10" },
 ];
 
 const ARTISTS = [
-  { img: akshitAsset.url, name: "AKSHIT", style: "Founder / Realism", spec: "Head honcho. Black & grey, portraits, full sleeves." },
-  { img: chintuAsset.url, name: "CHINTU", style: "Fine Line / Script", spec: "Single needle precision. Lettering & micro work." },
-  { img: mumbaAsset.url, name: "MUMBA", style: "Ornamental / Mandala", spec: "Geometric mandalas, dotwork, sacred patterns." },
-  { img: sahebAsset.url, name: "SAHEB", style: "Traditional / Bold", spec: "Old school flash, bold lines, biker culture." },
-  { img: sarthakAsset.url, name: "SARTHAK", style: "Blackwork / Illustrative", spec: "Heavy black, dark illustrative, neo-traditional." },
-  { img: vishalAsset.url, name: "VISHAL", style: "Japanese / Color", spec: "Irezumi, color realism, full back pieces." },
-  { img: sohaibAsset.url, name: "SOHAIB", style: "Lettering / Graffiti", spec: "Streetwear, graffiti scripts, knuckle tats." },
+  { img: akshitAsset.url, name: "AKSHIT", style: "Founder / Realism", spec: "Head honcho. Black & grey, portraits, full sleeves.", ig: "https://www.instagram.com/35siyahi?utm_source=qr" },
+  { img: chintuAsset.url, name: "CHINTU", style: "Fine Line / Script", spec: "Single needle precision. Lettering & micro work.", ig: "https://www.instagram.com/tattoosbychink?igsh=bjZidG04M3F5Zmxw" },
+  { img: mumbaAsset.url, name: "MUMBA", style: "Ornamental / Mandala", spec: "Geometric mandalas, dotwork, sacred patterns.", ig: "https://www.instagram.com/suprio1999?igsh=MWdzeHpsMGxpcjdleA==" },
+  { img: sahebAsset.url, name: "SAHEB", style: "Traditional / Bold", spec: "Old school flash, bold lines, biker culture.", ig: "https://www.instagram.com/sahebhore?utm_source=qr&igsh=MXIwdHQwc2RrOTdyNg==" },
+  { img: sarthakAsset.url, name: "SARTHAK", style: "Blackwork / Illustrative", spec: "Heavy black, dark illustrative, neo-traditional.", ig: "https://www.instagram.com/guywithinkk?igsh=MTY4czRoaTltandiZw%3D%3D&utm_source=qr" },
+  { img: vishalAsset.url, name: "VISHAL", style: "Japanese / Color", spec: "Irezumi, color realism, full back pieces.", ig: "https://www.instagram.com/ink_z_tattoos?utm_source=qr" },
+  { img: sohaibAsset.url, name: "SOHAIB", style: "Lettering / Graffiti", spec: "Streetwear, graffiti scripts, knuckle tats.", ig: "https://www.instagram.com/tattoosbyshoaib?igsh=MWNlazBzY2tpaHR2bA%3D%3D&utm_source=qr" },
 ];
 
 const COLLABS = [
@@ -279,17 +281,19 @@ function Index() {
             <div className="font-graf text-2xl text-acid rotate-[-4deg]">scroll · slow ↓</div>
           </div>
 
-          <div className="grid auto-rows-[170px] grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4">
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-5">
             {GALLERY.map((g) => (
               <figure
                 key={g.num}
-                className={`group relative overflow-hidden border-2 border-asphalt bg-charcoal ${g.span}`}
+                className="group relative overflow-hidden rounded-md border-2 border-asphalt bg-charcoal aspect-[3/4] shadow-[6px_6px_0_var(--asphalt)] hover:shadow-[8px_8px_0_var(--blood)] transition-shadow"
               >
                 <img
                   src={g.src}
                   alt={`${g.cat} tattoo by NU SKOOL`}
                   loading="lazy"
-                  className="h-full w-full object-cover grayscale-[40%] transition-all duration-500 group-hover:grayscale-0 group-hover:scale-105"
+                  decoding="async"
+                  className="h-full w-full object-cover scale-[1.12] transition-transform duration-700 ease-out group-hover:scale-[1.22]"
+                  style={{ filter: "contrast(1.08) saturate(1.05) brightness(1.02)" }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-asphalt/95 via-asphalt/10 to-transparent" />
                 <figcaption className="absolute inset-0 flex flex-col justify-between p-3 sm:p-4">
@@ -327,13 +331,20 @@ function Index() {
             {ARTISTS.map((a, i) => (
               <article
                 key={a.name}
-                className={`group relative overflow-hidden border-2 border-bone bg-charcoal transition-transform duration-300 hover:-translate-y-1 hover:rotate-[-0.6deg] ${
+                className={`group relative overflow-hidden rounded-md border-2 border-bone bg-charcoal transition-all duration-300 hover:-translate-y-1.5 hover:rotate-[-0.6deg] hover:shadow-[10px_10px_0_var(--blood)] ${
                   i % 3 === 1 ? "lg:translate-y-6" : i % 3 === 2 ? "lg:-translate-y-3" : ""
                 }`}
                 style={{ boxShadow: i % 2 === 0 ? "6px 6px 0 var(--blood)" : "6px 6px 0 var(--acid)" }}
               >
                 <div className="relative aspect-[3/4] overflow-hidden">
-                  <img src={a.img} alt={a.name} loading="lazy" className="h-full w-full object-cover grayscale-[30%] transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105" />
+                  <img
+                    src={a.img}
+                    alt={a.name}
+                    loading="lazy"
+                    decoding="async"
+                    className="h-full w-full object-cover object-top scale-[1.05] transition-transform duration-700 group-hover:scale-[1.12]"
+                    style={{ filter: "contrast(1.06) saturate(1.05) brightness(1.02)" }}
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-asphalt via-asphalt/30 to-transparent" />
                   <div className="absolute left-3 top-3 sticker text-[10px] -rotate-3">NU SKOOL CREW</div>
                   <div className="absolute right-3 top-3 font-mono text-[10px] tracking-widest text-acid bg-asphalt/80 px-2 py-1 border border-acid/60">
@@ -343,9 +354,20 @@ function Index() {
                     <div className="font-bungee text-3xl text-bone leading-none [text-shadow:3px_3px_0_var(--blood)]">{a.name}</div>
                   </div>
                 </div>
-                <div className="p-4 border-t-2 border-bone bg-asphalt">
-                  <div className="font-mono text-[10px] uppercase tracking-widest text-acid">▸ {a.style}</div>
-                  <p className="mt-2 font-body text-sm text-dirty uppercase tracking-wide leading-snug">{a.spec}</p>
+                <div className="p-4 border-t-2 border-bone bg-asphalt flex items-start justify-between gap-3">
+                  <div className="min-w-0">
+                    <div className="font-mono text-[10px] uppercase tracking-widest text-acid">▸ {a.style}</div>
+                    <p className="mt-2 font-body text-sm text-dirty uppercase tracking-wide leading-snug">{a.spec}</p>
+                  </div>
+                  <a
+                    href={a.ig}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    aria-label={`${a.name} on Instagram`}
+                    className="shrink-0 inline-flex h-10 w-10 items-center justify-center rounded-full border-2 border-bone text-bone bg-asphalt transition-all duration-300 hover:bg-blood hover:border-acid hover:text-bone hover:scale-110 hover:-rotate-6"
+                  >
+                    <IgIcon className="h-5 w-5" />
+                  </a>
                 </div>
               </article>
             ))}
@@ -592,12 +614,32 @@ function Index() {
               >
                 WhatsApp →
               </a>
+              <a
+                href={STUDIO_IG}
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label="NU SKOOL TATTOOS on Instagram"
+                className="mt-3 ml-2 inline-flex items-center gap-2 border-2 border-bone px-4 py-2 font-heavy uppercase tracking-widest text-sm text-bone hover:bg-blood hover:border-acid transition-all duration-300 hover:-translate-y-0.5"
+              >
+                <IgIcon className="h-4 w-4" /> Instagram
+              </a>
             </div>
           </div>
 
           <div className="mt-16 flex flex-col items-start justify-between gap-4 border-t border-bone/15 pt-6 font-mono text-[10px] uppercase tracking-widest text-dirty sm:flex-row sm:items-center">
             <div>© {new Date().getFullYear()} NU SKOOL TATTOOS · ALL RIGHTS INKED</div>
-            <div className="text-blood">INK YOUR IDENTITY ✦ CR PARK · DELHI</div>
+            <div className="flex items-center gap-3">
+              <a
+                href={STUDIO_IG}
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label="Instagram"
+                className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-bone/40 text-bone hover:text-acid hover:border-acid transition-colors"
+              >
+                <IgIcon className="h-4 w-4" />
+              </a>
+              <span className="text-blood">INK YOUR IDENTITY ✦ CR PARK · DELHI</span>
+            </div>
           </div>
         </div>
       </footer>
