@@ -564,7 +564,7 @@ function Index() {
         <div className="relative mx-auto grid max-w-7xl gap-10 md:gap-12 px-4 sm:px-6 md:grid-cols-2">
           <div className="min-w-0">
             <span className="font-mono text-xs uppercase tracking-[0.3em] text-asphalt">// 006 — the consultation</span>
-            <h2 className="mt-3 font-heavy leading-[0.85] text-bone [text-shadow:4px_4px_0_var(--asphalt)] text-6xl sm:text-6xl md:text-7xl lg:text-8xl sm:whitespace-nowrap break-words">
+            <h2 className="mt-3 font-heavy leading-[0.85] text-bone [text-shadow:4px_4px_0_var(--asphalt)] text-5xl sm:text-6xl md:text-7xl lg:text-8xl sm:whitespace-nowrap break-words">
               BOOK <span className="font-bungee-shade">SESSION.</span>
             </h2>
             <p className="mt-6 max-w-md font-body text-lg uppercase tracking-wider text-bone/80">
