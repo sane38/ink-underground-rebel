@@ -159,7 +159,7 @@ function Nav() {
         </nav>
         <a
           href="#book"
-          className="label-tag label-tag-hover text-xs sm:text-sm !bg-blood !text-bone !border-bone"
+          className="label-tag label-tag-hover text-[10px] sm:text-sm !bg-blood !text-bone !border-bone whitespace-nowrap !px-3 !py-2 sm:!px-4 sm:!py-2.5"
         >
             ◤ Book Session
         </a>
@@ -241,12 +241,12 @@ function Index() {
           <div className="md:col-span-9">
             <div className="mb-6 flex flex-wrap items-center gap-3">
               <span className="tape-strip">EST · CR PARK · GK 4</span>
-              <span className="font-mono text-xs uppercase tracking-[0.3em] text-chrome">// best tattoo studio · south delhi</span>
+              <span className="font-mono text-[10px] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.3em] text-chrome break-words">// best tattoo studio · south delhi</span>
             </div>
-            <h1 className="font-heavy text-[20vw] leading-[0.82] text-bone sm:text-[15vw] md:text-[12rem] lg:text-[15rem] [text-shadow:6px_6px_0_rgba(0,0,0,0.65)]">
+            <h1 className="font-heavy text-[16vw] leading-[0.82] text-bone sm:text-[15vw] md:text-[12rem] lg:text-[15rem] [text-shadow:6px_6px_0_rgba(0,0,0,0.65)] break-words">
               INK YOUR
               <br />
-              <span className="font-bungee-inline text-blood [text-shadow:8px_8px_0_var(--asphalt),12px_12px_0_var(--acid)]">
+              <span className="font-bungee-inline text-blood [text-shadow:4px_4px_0_var(--asphalt),8px_8px_0_var(--acid)] sm:[text-shadow:8px_8px_0_var(--asphalt),12px_12px_0_var(--acid)]">
                 IDENTITY
               </span>
             </h1>
@@ -564,7 +564,7 @@ function Index() {
         <div className="relative mx-auto grid max-w-7xl gap-10 md:gap-12 px-4 sm:px-6 md:grid-cols-2">
           <div className="min-w-0">
             <span className="font-mono text-xs uppercase tracking-[0.3em] text-asphalt">// 006 — the consultation</span>
-            <h2 className="mt-3 font-heavy leading-[0.85] text-bone [text-shadow:4px_4px_0_var(--asphalt)] text-5xl sm:text-6xl md:text-7xl lg:text-8xl whitespace-nowrap">
+            <h2 className="mt-3 font-heavy leading-[0.85] text-bone [text-shadow:4px_4px_0_var(--asphalt)] text-6xl sm:text-6xl md:text-7xl lg:text-8xl sm:whitespace-nowrap break-words">
               BOOK <span className="font-bungee-shade">SESSION.</span>
             </h2>
             <p className="mt-6 max-w-md font-body text-lg uppercase tracking-wider text-bone/80">
