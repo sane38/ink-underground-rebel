@@ -159,9 +159,9 @@ function Nav() {
         </nav>
         <a
           href="#book"
-          className="label-tag label-tag-hover text-[10px] sm:text-sm !bg-blood !text-bone !border-bone whitespace-nowrap !px-3 !py-2 sm:!px-4 sm:!py-2.5"
+          className="label-tag label-tag-hover text-[11px] sm:text-sm !bg-blood !text-bone !border-bone whitespace-nowrap !px-3 !py-2 sm:!px-4 sm:!py-2.5"
         >
-            ◤ Book Session
+            ◤ <span className="sm:hidden">Book</span><span className="hidden sm:inline">Book Session</span>
         </a>
           <a
             href={STUDIO_IG}
@@ -241,9 +241,9 @@ function Index() {
           <div className="md:col-span-9">
             <div className="mb-6 flex flex-wrap items-center gap-3">
               <span className="tape-strip">EST · CR PARK · GK 4</span>
-              <span className="font-mono text-[10px] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.3em] text-chrome break-words">// best tattoo studio · south delhi</span>
+              <span className="font-mono text-[10px] sm:text-xs uppercase tracking-[0.15em] sm:tracking-[0.3em] text-chrome break-words max-w-full">// best tattoo studio · south delhi</span>
             </div>
-            <h1 className="font-heavy text-[16vw] leading-[0.82] text-bone sm:text-[15vw] md:text-[12rem] lg:text-[15rem] [text-shadow:6px_6px_0_rgba(0,0,0,0.65)] break-words">
+            <h1 className="font-heavy text-[13vw] leading-[0.82] text-bone sm:text-[15vw] md:text-[12rem] lg:text-[15rem] [text-shadow:6px_6px_0_rgba(0,0,0,0.65)] break-words">
               INK YOUR
               <br />
               <span className="font-bungee-inline text-blood [text-shadow:4px_4px_0_var(--asphalt),8px_8px_0_var(--acid)] sm:[text-shadow:8px_8px_0_var(--asphalt),12px_12px_0_var(--acid)]">
