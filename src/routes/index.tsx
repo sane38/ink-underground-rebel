@@ -71,13 +71,13 @@ const GALLERY = [
 ];
 
 const ARTISTS = [
+  { img: sohaibAsset.url, name: "SOHAIB", style: "Lettering / Graffiti", spec: "Streetwear, graffiti scripts, knuckle tats.", ig: "https://www.instagram.com/tattoosbyshoaib?igsh=MWNlazBzY2tpaHR2bA%3D%3D&utm_source=qr" },
+  { img: sahebAsset.url, name: "SAHEB", style: "Traditional / Bold", spec: "Old school flash, bold lines, biker culture.", ig: "https://www.instagram.com/sahebhore?utm_source=qr&igsh=MXIwdHQwc2RrOTdyNg==" },
   { img: akshitAsset.url, name: "AKSHIT", style: "Founder / Realism", spec: "Head honcho. Black & grey, portraits, full sleeves.", ig: "https://www.instagram.com/35siyahi?utm_source=qr" },
   { img: chintuAsset.url, name: "CHINTU", style: "Fine Line / Script", spec: "Single needle precision. Lettering & micro work.", ig: "https://www.instagram.com/tattoosbychink?igsh=bjZidG04M3F5Zmxw" },
   { img: mumbaAsset.url, name: "MUMBA", style: "Ornamental / Mandala", spec: "Geometric mandalas, dotwork, sacred patterns.", ig: "https://www.instagram.com/suprio1999?igsh=MWdzeHpsMGxpcjdleA==" },
-  { img: sahebAsset.url, name: "SAHEB", style: "Traditional / Bold", spec: "Old school flash, bold lines, biker culture.", ig: "https://www.instagram.com/sahebhore?utm_source=qr&igsh=MXIwdHQwc2RrOTdyNg==" },
   { img: sarthakAsset.url, name: "SARTHAK", style: "Blackwork / Illustrative", spec: "Heavy black, dark illustrative, neo-traditional.", ig: "https://www.instagram.com/guywithinkk?igsh=MTY4czRoaTltandiZw%3D%3D&utm_source=qr" },
   { img: vishalAsset.url, name: "VISHAL", style: "Japanese / Color", spec: "Irezumi, color realism, full back pieces.", ig: "https://www.instagram.com/ink_z_tattoos?utm_source=qr" },
-  { img: sohaibAsset.url, name: "SOHAIB", style: "Lettering / Graffiti", spec: "Streetwear, graffiti scripts, knuckle tats.", ig: "https://www.instagram.com/tattoosbyshoaib?igsh=MWNlazBzY2tpaHR2bA%3D%3D&utm_source=qr" },
 ];
 
 const COLLABS = [
@@ -161,8 +161,17 @@ function Nav() {
           href="#book"
           className="label-tag label-tag-hover text-xs sm:text-sm !bg-blood !text-bone !border-bone"
         >
-          ◤ Book Session
+            ◤ Book Session
         </a>
+          <a
+            href={STUDIO_IG}
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="NU SKOOL TATTOOS on Instagram"
+            className="ml-2 hidden sm:inline-flex h-9 w-9 items-center justify-center rounded-full border-2 border-bone text-bone hover:bg-blood hover:border-acid hover:text-bone transition-all duration-300 hover:-translate-y-0.5"
+          >
+            <IgIcon className="h-4 w-4" />
+          </a>
       </div>
     </header>
   );
@@ -359,7 +368,6 @@ function Index() {
                     style={{ filter: "contrast(1.06) saturate(1.05) brightness(1.02)" }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-asphalt via-asphalt/30 to-transparent" />
-                  <div className="absolute left-3 top-3 sticker text-[10px] -rotate-3">NU SKOOL CREW</div>
                   <div className="absolute right-3 top-3 font-mono text-[10px] tracking-widest text-acid bg-asphalt/80 px-2 py-1 border border-acid/60">
                     0{i + 1} / 0{ARTISTS.length}
                   </div>
@@ -556,9 +564,8 @@ function Index() {
         <div className="relative mx-auto grid max-w-7xl gap-10 md:gap-12 px-4 sm:px-6 md:grid-cols-2">
           <div className="min-w-0">
             <span className="font-mono text-xs uppercase tracking-[0.3em] text-asphalt">// 006 — the consultation</span>
-            <h2 className="mt-3 font-heavy leading-[0.85] text-bone [text-shadow:4px_4px_0_var(--asphalt)] text-5xl sm:text-7xl md:text-8xl lg:text-9xl break-words">
-              BOOK<br />
-              <span className="font-bungee-shade">A SESSION.</span>
+            <h2 className="mt-3 font-heavy leading-[0.85] text-bone [text-shadow:4px_4px_0_var(--asphalt)] text-5xl sm:text-6xl md:text-7xl lg:text-8xl whitespace-nowrap">
+              BOOK <span className="font-bungee-shade">SESSION.</span>
             </h2>
             <p className="mt-6 max-w-md font-body text-lg uppercase tracking-wider text-bone/80">
               Drop the details. We'll hit you back with a quote, an artist match and a slot at the shop.
@@ -630,6 +637,26 @@ function Index() {
                 Chittaranjan Park, GK 4,<br />
                 New Delhi
               </address>
+              <a
+                href="https://maps.app.goo.gl/giQfyBzKxu6Y9kb28"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="mt-3 inline-block font-mono text-[10px] uppercase tracking-widest text-acid hover:text-bone"
+              >
+                ► Open in Google Maps
+              </a>
+              <div className="mt-4 overflow-hidden border-2 border-bone shadow-[6px_6px_0_var(--blood)]">
+                <iframe
+                  title="NU SKOOL TATTOOS location on Google Maps"
+                  src="https://www.google.com/maps?q=Nu+Skool+Tattoos,+Shop+No.3,+NRI+Complex,+Mandakini+Enclave+Rd,+Chittaranjan+Park,+GK+4,+New+Delhi&output=embed"
+                  width="100%"
+                  height="220"
+                  style={{ border: 0, filter: "grayscale(0.4) contrast(1.05)" }}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  allowFullScreen
+                />
+              </div>
             </div>
 
             <div>
