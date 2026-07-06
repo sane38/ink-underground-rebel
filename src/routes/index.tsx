@@ -27,11 +27,39 @@ const STUDIO_IG = "https://www.instagram.com/nu_skool_tattoos?igsh=MXUybnJtNHIwc
 
 function IgIcon({ className = "" }: { className?: string }) {
   return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
-      <rect x="3" y="3" width="18" height="18" rx="5" />
-      <circle cx="12" cy="12" r="4" />
-      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+    <svg viewBox="0 0 32 32" className={className} aria-hidden="true">
+      <defs>
+        <linearGradient id="ig-graf-grad" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stopColor="var(--acid)" />
+          <stop offset="45%" stopColor="var(--burnt)" />
+          <stop offset="100%" stopColor="var(--blood)" />
+        </linearGradient>
+      </defs>
+      {/* hard offset drop shadow */}
+      <rect x="5" y="6" width="24" height="24" rx="7" fill="var(--asphalt)" />
+      {/* main sticker */}
+      <rect x="3" y="3" width="24" height="24" rx="7" fill="url(#ig-graf-grad)" stroke="var(--bone)" strokeWidth="2.2" />
+      {/* lens */}
+      <circle cx="15" cy="15" r="6.2" fill="none" stroke="var(--bone)" strokeWidth="2.6" />
+      <circle cx="15" cy="15" r="2.6" fill="var(--bone)" />
+      {/* flash dot */}
+      <circle cx="22" cy="8.5" r="1.9" fill="var(--bone)" stroke="var(--asphalt)" strokeWidth="0.8" />
     </svg>
+  );
+}
+
+function FollowChip({ label = "FOLLOW @NU_SKOOL_TATTOOS", className = "" }: { label?: string; className?: string }) {
+  return (
+    <a
+      href={STUDIO_IG}
+      target="_blank"
+      rel="noreferrer noopener"
+      aria-label="Follow NU SKOOL TATTOOS on Instagram"
+      className={`group inline-flex items-center gap-2 border-2 border-bone bg-asphalt px-3 py-1.5 font-heavy uppercase tracking-widest text-[11px] text-bone shadow-[4px_4px_0_var(--blood)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[6px_6px_0_var(--acid)] hover:text-acid ${className}`}
+    >
+      <IgIcon className="h-4 w-4" />
+      <span>{label}</span>
+    </a>
   );
 }
 
