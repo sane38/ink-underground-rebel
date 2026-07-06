@@ -27,11 +27,39 @@ const STUDIO_IG = "https://www.instagram.com/nu_skool_tattoos?igsh=MXUybnJtNHIwc
 
 function IgIcon({ className = "" }: { className?: string }) {
   return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
-      <rect x="3" y="3" width="18" height="18" rx="5" />
-      <circle cx="12" cy="12" r="4" />
-      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+    <svg viewBox="0 0 32 32" className={className} aria-hidden="true">
+      <defs>
+        <linearGradient id="ig-graf-grad" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stopColor="var(--acid)" />
+          <stop offset="45%" stopColor="var(--burnt)" />
+          <stop offset="100%" stopColor="var(--blood)" />
+        </linearGradient>
+      </defs>
+      {/* hard offset drop shadow */}
+      <rect x="5" y="6" width="24" height="24" rx="7" fill="var(--asphalt)" />
+      {/* main sticker */}
+      <rect x="3" y="3" width="24" height="24" rx="7" fill="url(#ig-graf-grad)" stroke="var(--bone)" strokeWidth="2.2" />
+      {/* lens */}
+      <circle cx="15" cy="15" r="6.2" fill="none" stroke="var(--bone)" strokeWidth="2.6" />
+      <circle cx="15" cy="15" r="2.6" fill="var(--bone)" />
+      {/* flash dot */}
+      <circle cx="22" cy="8.5" r="1.9" fill="var(--bone)" stroke="var(--asphalt)" strokeWidth="0.8" />
     </svg>
+  );
+}
+
+function FollowChip({ label = "FOLLOW @NU_SKOOL_TATTOOS", className = "" }: { label?: string; className?: string }) {
+  return (
+    <a
+      href={STUDIO_IG}
+      target="_blank"
+      rel="noreferrer noopener"
+      aria-label="Follow NU SKOOL TATTOOS on Instagram"
+      className={`group inline-flex items-center gap-2 border-2 border-bone bg-asphalt px-3 py-1.5 font-heavy uppercase tracking-widest text-[11px] text-bone shadow-[4px_4px_0_var(--blood)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[6px_6px_0_var(--acid)] hover:text-acid ${className}`}
+    >
+      <IgIcon className="h-4 w-4" />
+      <span>{label}</span>
+    </a>
   );
 }
 
@@ -299,6 +327,7 @@ function Index() {
               <p className="mt-4 max-w-xl font-body uppercase tracking-wider text-dirty">
                 15+ pieces. Every style. Pulled straight off the studio walls — torn-down flash sheets from back alleys.
               </p>
+              <div className="mt-5"><FollowChip /></div>
             </div>
             <div className="font-graf text-2xl text-acid rotate-[-4deg]">scroll · slow ↓</div>
           </div>
@@ -347,6 +376,7 @@ function Index() {
             <p className="mt-4 max-w-xl font-body uppercase tracking-wider text-dirty">
               Seven artists. Seven styles. One underground studio. Real people. Real ink.
             </p>
+            <div className="mt-5"><FollowChip label="FOLLOW THE CREW @NU_SKOOL_TATTOOS" /></div>
           </div>
 
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
@@ -572,9 +602,19 @@ function Index() {
             </p>
             <div className="mt-10 space-y-3 font-mono text-sm uppercase tracking-widest text-bone">
               <div>► CR PARK · GK 4 · NEW DELHI</div>
+              <div>► KHANPUR · DUGGAL COLONY · NEW DELHI</div>
               <div>► CALL: 092050 49780</div>
               <div>► MON—SUN · 12PM TILL LATE</div>
             </div>
+            <a
+              href={STUDIO_IG}
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="Follow NU SKOOL TATTOOS on Instagram"
+              className="mt-8 inline-flex items-center gap-2 border-2 border-asphalt bg-bone px-4 py-2 font-heavy uppercase tracking-widest text-xs text-asphalt shadow-[6px_6px_0_var(--asphalt)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[8px_8px_0_var(--acid)]"
+            >
+              <IgIcon className="h-5 w-5" /> DM us @nu_skool_tattoos
+            </a>
           </div>
 
           <form
@@ -631,26 +671,45 @@ function Index() {
 
             <div>
               <div className="font-mono text-xs uppercase tracking-widest text-blood">// visit</div>
-              <address className="mt-3 not-italic font-body text-bone text-lg leading-snug">
-                Shop No.3, NRI Complex,<br />
-                Mandakini Enclave Rd,<br />
-                Chittaranjan Park, GK 4,<br />
-                New Delhi
-              </address>
-              <a
-                href="https://maps.app.goo.gl/giQfyBzKxu6Y9kb28"
-                target="_blank"
-                rel="noreferrer noopener"
-                className="mt-3 inline-block font-mono text-[10px] uppercase tracking-widest text-acid hover:text-bone"
-              >
-                ► Open in Google Maps
-              </a>
+              <div className="mt-3 space-y-4">
+                <div>
+                  <div className="font-mono text-[10px] uppercase tracking-widest text-acid">◤ studio 01 — cr park</div>
+                  <address className="mt-1 not-italic font-body text-bone text-base leading-snug">
+                    Shop No.3, NRI Complex,<br />
+                    Mandakini Enclave Rd,<br />
+                    Chittaranjan Park, GK 4, New Delhi
+                  </address>
+                  <a
+                    href="https://maps.app.goo.gl/giQfyBzKxu6Y9kb28"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="mt-1 inline-block font-mono text-[10px] uppercase tracking-widest text-acid hover:text-bone"
+                  >
+                    ► Open in Google Maps
+                  </a>
+                </div>
+                <div>
+                  <div className="font-mono text-[10px] uppercase tracking-widest text-acid">◤ studio 02 — khanpur</div>
+                  <address className="mt-1 not-italic font-body text-bone text-base leading-snug">
+                    B-10, S/F, Duggal Colony,<br />
+                    Khanpur, New Delhi, Delhi 110080
+                  </address>
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=B-10%20Duggal%20Colony%20Khanpur%20New%20Delhi%20110080"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="mt-1 inline-block font-mono text-[10px] uppercase tracking-widest text-acid hover:text-bone"
+                  >
+                    ► Open in Google Maps
+                  </a>
+                </div>
+              </div>
               <div className="mt-4 overflow-hidden border-2 border-bone shadow-[6px_6px_0_var(--blood)]">
                 <iframe
                   title="NU SKOOL TATTOOS location on Google Maps"
                   src="https://www.google.com/maps?q=Nu+Skool+Tattoos,+Shop+No.3,+NRI+Complex,+Mandakini+Enclave+Rd,+Chittaranjan+Park,+GK+4,+New+Delhi&output=embed"
                   width="100%"
-                  height="220"
+                  height="180"
                   style={{ border: 0, filter: "grayscale(0.4) contrast(1.05)" }}
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
