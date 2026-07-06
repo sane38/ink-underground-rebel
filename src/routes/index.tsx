@@ -714,17 +714,42 @@ function Index() {
                   </a>
                 </div>
               </div>
-              <div className="mt-4 overflow-hidden border-2 border-bone shadow-[6px_6px_0_var(--blood)]">
-                <iframe
-                  title="NU SKOOL TATTOOS location on Google Maps"
-                  src="https://www.google.com/maps?q=Nu+Skool+Tattoos,+Shop+No.3,+NRI+Complex,+Mandakini+Enclave+Rd,+Chittaranjan+Park,+GK+4,+New+Delhi&output=embed"
-                  width="100%"
-                  height="180"
-                  style={{ border: 0, filter: "grayscale(0.4) contrast(1.05)" }}
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  allowFullScreen
-                />
+              <div className="mt-6 relative">
+                <div className="pointer-events-none absolute -top-4 -left-2 z-20 font-graf text-2xl text-acid rotate-[-6deg] drop-shadow-[3px_3px_0_var(--asphalt)]">
+                  find us ↓
+                </div>
+                <div className="pointer-events-none absolute -top-3 right-1 z-20 tape-strip text-[10px]">2 STUDIOS</div>
+                <div className="grid gap-4">
+                  <div className="relative overflow-hidden border-2 border-bone shadow-[6px_6px_0_var(--blood)]">
+                    <div className="absolute top-2 left-2 z-10 tape-strip text-[9px] !py-1 !px-2">◤ CR PARK</div>
+                    <iframe
+                      title="NU SKOOL TATTOOS · CR Park on Google Maps"
+                      src="https://www.google.com/maps?q=Nu+Skool+Tattoos,+Shop+No.3,+NRI+Complex,+Mandakini+Enclave+Rd,+Chittaranjan+Park,+GK+4,+New+Delhi&output=embed"
+                      width="100%"
+                      height="180"
+                      style={{ border: 0, filter: "grayscale(0.5) contrast(1.1)" }}
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      allowFullScreen
+                    />
+                  </div>
+                  <div className="relative overflow-hidden border-2 border-bone shadow-[6px_6px_0_var(--acid)]">
+                    <div className="absolute top-2 left-2 z-10 tape-strip text-[9px] !py-1 !px-2 !bg-blood !text-bone">◤ KHANPUR</div>
+                    <iframe
+                      title="NU SKOOL TATTOOS · Khanpur on Google Maps"
+                      src="https://www.google.com/maps?q=B-10,+Duggal+Colony,+Khanpur,+New+Delhi,+Delhi+110080&output=embed"
+                      width="100%"
+                      height="180"
+                      style={{ border: 0, filter: "grayscale(0.5) contrast(1.1)" }}
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      allowFullScreen
+                    />
+                  </div>
+                </div>
+                <div className="pointer-events-none absolute -bottom-3 -right-2 font-graf text-xl text-blood rotate-[4deg] drop-shadow-[2px_2px_0_var(--asphalt)]">
+                  ride thru ✦
+                </div>
               </div>
             </div>
 
