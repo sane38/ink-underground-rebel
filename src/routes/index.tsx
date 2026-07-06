@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import logoAsset from "@/assets/nuskool-logo.asset.json";
 import heroImg from "@/assets/hero-tattoo.jpg";
+import heroLogo from "@/assets/nuskool-hero-logo.jpeg.asset.json";
 import bikerImg from "@/assets/biker.jpg";
 import graffitiWall from "@/assets/graffiti-wall.jpg";
 import akshitAsset from "@/assets/artists/akshit.jpeg.asset.json";
@@ -117,7 +118,7 @@ const COLLABS = [
     url: "https://mokocare.com/",
   },
   {
-    name: "ORNIX",
+    name: "ORNIXX",
     tag: "JEWELRY / PIERCING",
     note: "Premium piercing jewelry · adorn your edge.",
     logo: ornixLogo.url,
@@ -263,6 +264,15 @@ function Index() {
           <img src={heroImg} alt="Tattoo artist at work in underground studio" className="h-full w-full object-cover" width={1920} height={1280} />
           <div className="absolute inset-0 bg-gradient-to-b from-asphalt/40 via-asphalt/70 to-asphalt" />
           <div className="absolute inset-0 opacity-30 mix-blend-overlay" style={{ backgroundImage: "var(--grain)" }} />
+          <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+            <img
+              src={heroLogo.url}
+              alt=""
+              aria-hidden="true"
+              className="w-[70%] max-w-[720px] opacity-[0.08] mix-blend-screen select-none"
+              style={{ filter: "contrast(1.1)" }}
+            />
+          </div>
         </div>
 
         <div className="relative mx-auto grid min-h-[calc(100vh-5rem)] max-w-7xl items-end gap-8 px-4 pb-16 pt-32 sm:px-6 md:grid-cols-12">
@@ -460,7 +470,7 @@ function Index() {
                       alt={`${c.name} logo`}
                       loading="lazy"
                       decoding="async"
-                      className="h-full w-full object-cover"
+                      className="h-full w-full object-contain p-2"
                     />
                   </div>
                   <div className="min-w-0 flex-1">
