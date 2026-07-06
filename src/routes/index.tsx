@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import logoAsset from "@/assets/nuskool-logo.asset.json";
 import heroImg from "@/assets/hero-tattoo.jpg";
+import heroLogo from "@/assets/nuskool-hero-logo.jpeg.asset.json";
 import bikerImg from "@/assets/biker.jpg";
 import graffitiWall from "@/assets/graffiti-wall.jpg";
 import akshitAsset from "@/assets/artists/akshit.jpeg.asset.json";
@@ -117,7 +118,7 @@ const COLLABS = [
     url: "https://mokocare.com/",
   },
   {
-    name: "ORNIX",
+    name: "ORNIXX",
     tag: "JEWELRY / PIERCING",
     note: "Premium piercing jewelry · adorn your edge.",
     logo: ornixLogo.url,
@@ -263,6 +264,15 @@ function Index() {
           <img src={heroImg} alt="Tattoo artist at work in underground studio" className="h-full w-full object-cover" width={1920} height={1280} />
           <div className="absolute inset-0 bg-gradient-to-b from-asphalt/40 via-asphalt/70 to-asphalt" />
           <div className="absolute inset-0 opacity-30 mix-blend-overlay" style={{ backgroundImage: "var(--grain)" }} />
+          <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+            <img
+              src={heroLogo.url}
+              alt=""
+              aria-hidden="true"
+              className="w-[70%] max-w-[720px] opacity-[0.08] mix-blend-screen select-none"
+              style={{ filter: "contrast(1.1)" }}
+            />
+          </div>
         </div>
 
         <div className="relative mx-auto grid min-h-[calc(100vh-5rem)] max-w-7xl items-end gap-8 px-4 pb-16 pt-32 sm:px-6 md:grid-cols-12">
@@ -460,7 +470,7 @@ function Index() {
                       alt={`${c.name} logo`}
                       loading="lazy"
                       decoding="async"
-                      className="h-full w-full object-cover"
+                      className="h-full w-full object-contain p-2"
                     />
                   </div>
                   <div className="min-w-0 flex-1">
@@ -704,17 +714,42 @@ function Index() {
                   </a>
                 </div>
               </div>
-              <div className="mt-4 overflow-hidden border-2 border-bone shadow-[6px_6px_0_var(--blood)]">
-                <iframe
-                  title="NU SKOOL TATTOOS location on Google Maps"
-                  src="https://www.google.com/maps?q=Nu+Skool+Tattoos,+Shop+No.3,+NRI+Complex,+Mandakini+Enclave+Rd,+Chittaranjan+Park,+GK+4,+New+Delhi&output=embed"
-                  width="100%"
-                  height="180"
-                  style={{ border: 0, filter: "grayscale(0.4) contrast(1.05)" }}
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  allowFullScreen
-                />
+              <div className="mt-6 relative">
+                <div className="pointer-events-none absolute -top-4 -left-2 z-20 font-graf text-2xl text-acid rotate-[-6deg] drop-shadow-[3px_3px_0_var(--asphalt)]">
+                  find us ↓
+                </div>
+                <div className="pointer-events-none absolute -top-3 right-1 z-20 tape-strip text-[10px]">2 STUDIOS</div>
+                <div className="grid gap-4">
+                  <div className="relative overflow-hidden border-2 border-bone shadow-[6px_6px_0_var(--blood)]">
+                    <div className="absolute top-2 left-2 z-10 tape-strip text-[9px] !py-1 !px-2">◤ CR PARK</div>
+                    <iframe
+                      title="NU SKOOL TATTOOS · CR Park on Google Maps"
+                      src="https://www.google.com/maps?q=Nu+Skool+Tattoos,+Shop+No.3,+NRI+Complex,+Mandakini+Enclave+Rd,+Chittaranjan+Park,+GK+4,+New+Delhi&output=embed"
+                      width="100%"
+                      height="180"
+                      style={{ border: 0, filter: "grayscale(0.5) contrast(1.1)" }}
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      allowFullScreen
+                    />
+                  </div>
+                  <div className="relative overflow-hidden border-2 border-bone shadow-[6px_6px_0_var(--acid)]">
+                    <div className="absolute top-2 left-2 z-10 tape-strip text-[9px] !py-1 !px-2 !bg-blood !text-bone">◤ KHANPUR</div>
+                    <iframe
+                      title="NU SKOOL TATTOOS · Khanpur on Google Maps"
+                      src="https://www.google.com/maps?q=B-10,+Duggal+Colony,+Khanpur,+New+Delhi,+Delhi+110080&output=embed"
+                      width="100%"
+                      height="180"
+                      style={{ border: 0, filter: "grayscale(0.5) contrast(1.1)" }}
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      allowFullScreen
+                    />
+                  </div>
+                </div>
+                <div className="pointer-events-none absolute -bottom-3 -right-2 font-graf text-xl text-blood rotate-[4deg] drop-shadow-[2px_2px_0_var(--asphalt)]">
+                  ride thru ✦
+                </div>
               </div>
             </div>
 
