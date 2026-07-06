@@ -671,26 +671,45 @@ function Index() {
 
             <div>
               <div className="font-mono text-xs uppercase tracking-widest text-blood">// visit</div>
-              <address className="mt-3 not-italic font-body text-bone text-lg leading-snug">
-                Shop No.3, NRI Complex,<br />
-                Mandakini Enclave Rd,<br />
-                Chittaranjan Park, GK 4,<br />
-                New Delhi
-              </address>
-              <a
-                href="https://maps.app.goo.gl/giQfyBzKxu6Y9kb28"
-                target="_blank"
-                rel="noreferrer noopener"
-                className="mt-3 inline-block font-mono text-[10px] uppercase tracking-widest text-acid hover:text-bone"
-              >
-                ► Open in Google Maps
-              </a>
+              <div className="mt-3 space-y-4">
+                <div>
+                  <div className="font-mono text-[10px] uppercase tracking-widest text-acid">◤ studio 01 — cr park</div>
+                  <address className="mt-1 not-italic font-body text-bone text-base leading-snug">
+                    Shop No.3, NRI Complex,<br />
+                    Mandakini Enclave Rd,<br />
+                    Chittaranjan Park, GK 4, New Delhi
+                  </address>
+                  <a
+                    href="https://maps.app.goo.gl/giQfyBzKxu6Y9kb28"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="mt-1 inline-block font-mono text-[10px] uppercase tracking-widest text-acid hover:text-bone"
+                  >
+                    ► Open in Google Maps
+                  </a>
+                </div>
+                <div>
+                  <div className="font-mono text-[10px] uppercase tracking-widest text-acid">◤ studio 02 — khanpur</div>
+                  <address className="mt-1 not-italic font-body text-bone text-base leading-snug">
+                    B-10, S/F, Duggal Colony,<br />
+                    Khanpur, New Delhi, Delhi 110080
+                  </address>
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=B-10%20Duggal%20Colony%20Khanpur%20New%20Delhi%20110080"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="mt-1 inline-block font-mono text-[10px] uppercase tracking-widest text-acid hover:text-bone"
+                  >
+                    ► Open in Google Maps
+                  </a>
+                </div>
+              </div>
               <div className="mt-4 overflow-hidden border-2 border-bone shadow-[6px_6px_0_var(--blood)]">
                 <iframe
                   title="NU SKOOL TATTOOS location on Google Maps"
                   src="https://www.google.com/maps?q=Nu+Skool+Tattoos,+Shop+No.3,+NRI+Complex,+Mandakini+Enclave+Rd,+Chittaranjan+Park,+GK+4,+New+Delhi&output=embed"
                   width="100%"
-                  height="220"
+                  height="180"
                   style={{ border: 0, filter: "grayscale(0.4) contrast(1.05)" }}
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
