@@ -327,6 +327,7 @@ function Index() {
               <p className="mt-4 max-w-xl font-body uppercase tracking-wider text-dirty">
                 15+ pieces. Every style. Pulled straight off the studio walls — torn-down flash sheets from back alleys.
               </p>
+              <div className="mt-5"><FollowChip /></div>
             </div>
             <div className="font-graf text-2xl text-acid rotate-[-4deg]">scroll · slow ↓</div>
           </div>
@@ -375,6 +376,7 @@ function Index() {
             <p className="mt-4 max-w-xl font-body uppercase tracking-wider text-dirty">
               Seven artists. Seven styles. One underground studio. Real people. Real ink.
             </p>
+            <div className="mt-5"><FollowChip label="FOLLOW THE CREW @NU_SKOOL_TATTOOS" /></div>
           </div>
 
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
@@ -600,9 +602,19 @@ function Index() {
             </p>
             <div className="mt-10 space-y-3 font-mono text-sm uppercase tracking-widest text-bone">
               <div>► CR PARK · GK 4 · NEW DELHI</div>
+              <div>► KHANPUR · DUGGAL COLONY · NEW DELHI</div>
               <div>► CALL: 092050 49780</div>
               <div>► MON—SUN · 12PM TILL LATE</div>
             </div>
+            <a
+              href={STUDIO_IG}
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="Follow NU SKOOL TATTOOS on Instagram"
+              className="mt-8 inline-flex items-center gap-2 border-2 border-asphalt bg-bone px-4 py-2 font-heavy uppercase tracking-widest text-xs text-asphalt shadow-[6px_6px_0_var(--asphalt)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[8px_8px_0_var(--acid)]"
+            >
+              <IgIcon className="h-5 w-5" /> DM us @nu_skool_tattoos
+            </a>
           </div>
 
           <form
