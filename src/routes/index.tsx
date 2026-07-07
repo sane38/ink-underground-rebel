@@ -688,7 +688,7 @@ function Index() {
               <div className="font-mono text-xs uppercase tracking-widest text-blood">// visit</div>
               <div className="mt-3 space-y-4">
                 <div>
-                  <div className="font-mono text-[10px] uppercase tracking-widest text-acid">◤ studio 01 — cr park</div>
+                  <div className="font-graf text-2xl text-acid rotate-[-2deg] drop-shadow-[2px_2px_0_var(--asphalt)]">◤ Studio 01 — CR Park</div>
                   <address className="mt-1 not-italic font-body text-bone text-base leading-snug">
                     Shop No.3, NRI Complex,<br />
                     Mandakini Enclave Rd,<br />
@@ -704,7 +704,7 @@ function Index() {
                   </a>
                 </div>
                 <div>
-                  <div className="font-mono text-[10px] uppercase tracking-widest text-acid">◤ studio 02 — khanpur</div>
+                  <div className="font-graf text-2xl text-blood rotate-[2deg] drop-shadow-[2px_2px_0_var(--asphalt)]">◤ Studio 02 — Khanpur</div>
                   <address className="mt-1 not-italic font-body text-bone text-base leading-snug">
                     B-10, S/F, Duggal Colony,<br />
                     Khanpur, New Delhi, Delhi 110080
