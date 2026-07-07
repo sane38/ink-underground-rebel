@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import logoAsset from "@/assets/nuskool-logo.asset.json";
 import heroImg from "@/assets/hero-tattoo.jpg";
-import heroLogo from "@/assets/nuskool-hero-logo.jpeg.asset.json";
+import heroLogo from "@/assets/nuskool-hero-logo-v2.jpeg.asset.json";
 import bikerImg from "@/assets/biker.jpg";
 import graffitiWall from "@/assets/graffiti-wall.jpg";
 import akshitAsset from "@/assets/artists/akshit.jpeg.asset.json";
@@ -264,58 +264,63 @@ function Index() {
           <img src={heroImg} alt="Tattoo artist at work in underground studio" className="h-full w-full object-cover" width={1920} height={1280} />
           <div className="absolute inset-0 bg-gradient-to-b from-asphalt/40 via-asphalt/70 to-asphalt" />
           <div className="absolute inset-0 opacity-30 mix-blend-overlay" style={{ backgroundImage: "var(--grain)" }} />
-          <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-            <img
-              src={heroLogo.url}
-              alt=""
-              aria-hidden="true"
-              className="w-[70%] max-w-[720px] opacity-[0.08] mix-blend-screen select-none"
-              style={{ filter: "contrast(1.1)" }}
-            />
-          </div>
         </div>
 
-        <div className="relative mx-auto grid min-h-[calc(100vh-5rem)] max-w-7xl items-end gap-8 px-4 pb-16 pt-32 sm:px-6 md:grid-cols-12">
-          <div className="md:col-span-9">
+        <div className="relative mx-auto grid min-h-[calc(100vh-5rem)] max-w-7xl items-center gap-8 px-4 pb-16 pt-28 sm:px-6 md:grid-cols-12 md:gap-10 lg:gap-14">
+          <div className="md:col-span-7 lg:col-span-7">
             <div className="mb-6 flex flex-wrap items-center gap-3">
               <span className="tape-strip">EST · CR PARK · GK 4</span>
               <span className="font-mono text-[10px] sm:text-xs uppercase tracking-[0.15em] sm:tracking-[0.3em] text-chrome break-words max-w-full">// best tattoo studio · south delhi</span>
             </div>
-            <h1 className="font-heavy text-[13vw] leading-[0.82] text-bone sm:text-[15vw] md:text-[12rem] lg:text-[15rem] [text-shadow:6px_6px_0_rgba(0,0,0,0.65)] break-words">
+            <h1 className="font-heavy text-[13vw] leading-[0.82] text-bone sm:text-[15vw] md:text-[7.5rem] lg:text-[9rem] xl:text-[10.5rem] [text-shadow:6px_6px_0_rgba(0,0,0,0.65)] break-words">
               INK YOUR
               <br />
               <span className="font-bungee-inline text-blood [text-shadow:4px_4px_0_var(--asphalt),8px_8px_0_var(--acid)] sm:[text-shadow:8px_8px_0_var(--asphalt),12px_12px_0_var(--acid)]">
                 IDENTITY
               </span>
             </h1>
-            <p className="mt-8 max-w-xl font-body text-lg uppercase tracking-wider text-dirty sm:text-xl">
+            <p className="mt-6 max-w-xl font-body text-lg uppercase tracking-wider text-dirty sm:text-xl">
               Street culture. Personal stories. <span className="text-acid">Permanent art.</span>
             </p>
-            <div className="mt-10 flex flex-wrap gap-4">
+            <div className="mt-8 flex flex-wrap gap-4">
               <a
                 href="#book"
-                className="label-tag label-tag-hover !bg-blood !text-bone !border-bone text-base px-7 py-4"
+                className="label-tag label-tag-hover !bg-blood !text-bone !border-bone text-base px-7 py-4 whitespace-nowrap"
               >
                 ◤ Book Session →
               </a>
               <a
                 href="#gallery"
-                className="label-tag label-tag-hover !bg-asphalt !text-bone !border-bone text-base px-7 py-4"
+                className="label-tag label-tag-hover !bg-asphalt !text-bone !border-bone text-base px-7 py-4 whitespace-nowrap"
               >
                 ◤ View Artwork
               </a>
             </div>
           </div>
 
-          <aside className="md:col-span-3 md:justify-self-end space-y-4">
+          <aside className="md:col-span-5 lg:col-span-5 md:justify-self-center w-full space-y-4">
+            <div className="relative mx-auto max-w-[440px]">
+              <div className="pointer-events-none absolute -top-3 -left-2 z-10 tape-strip text-[10px]">◤ OFFICIAL LOGO</div>
+              <img
+                src={heroLogo.url}
+                alt="Nu Skool Tattoos official logo"
+                width={1024}
+                height={1024}
+                loading="eager"
+                decoding="async"
+                className="block w-full h-auto select-none [mix-blend-mode:screen] drop-shadow-[8px_8px_0_var(--blood)]"
+              />
+            </div>
+            <div className="hidden md:grid grid-cols-2 gap-3">
             <div className="rotate-2 border-2 border-acid bg-asphalt/80 p-4 backdrop-blur">
               <div className="font-mono text-[10px] tracking-widest text-acid">★★★★★ 5.0</div>
-              <div className="mt-1 font-display text-3xl text-bone">2,400+</div>
+              <div className="mt-1 font-display text-2xl text-bone">2,400+</div>
               <div className="font-mono text-[10px] uppercase tracking-widest text-dirty">tattoos inked</div>
             </div>
             <div className="-rotate-2 border-2 border-bone bg-blood p-4">
-              <div className="font-display text-3xl text-bone">12+</div>
+              <div className="font-display text-2xl text-bone">12+</div>
               <div className="font-mono text-[10px] uppercase tracking-widest text-bone/80">years on the streets</div>
+            </div>
             </div>
           </aside>
         </div>
