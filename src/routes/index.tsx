@@ -267,12 +267,12 @@ function Index() {
         </div>
 
         <div className="relative mx-auto grid min-h-[calc(100vh-5rem)] max-w-7xl items-center gap-8 px-4 pb-16 pt-28 sm:px-6 md:grid-cols-12 md:gap-10 lg:gap-14">
-          <div className="md:col-span-7 lg:col-span-7">
+          <div className="md:col-span-7 lg:col-span-8">
             <div className="mb-6 flex flex-wrap items-center gap-3">
               <span className="tape-strip">EST · CR PARK · GK 4</span>
               <span className="font-mono text-[10px] sm:text-xs uppercase tracking-[0.15em] sm:tracking-[0.3em] text-chrome break-words max-w-full">// best tattoo studio · south delhi</span>
             </div>
-            <h1 className="font-heavy text-[13vw] leading-[0.82] text-bone sm:text-[15vw] md:text-[6rem] lg:text-[7.5rem] xl:text-[8.75rem] [text-shadow:6px_6px_0_rgba(0,0,0,0.65)] break-words">
+            <h1 className="font-heavy text-[13vw] leading-[0.82] text-bone sm:text-[15vw] md:text-[5rem] lg:text-[6rem] xl:text-[7rem] [text-shadow:6px_6px_0_rgba(0,0,0,0.65)] break-words">
               INK YOUR
               <br />
               <span className="font-bungee-inline text-blood [text-shadow:4px_4px_0_var(--asphalt),8px_8px_0_var(--acid)] sm:[text-shadow:8px_8px_0_var(--asphalt),12px_12px_0_var(--acid)]">
@@ -298,7 +298,7 @@ function Index() {
             </div>
           </div>
 
-          <aside className="md:col-span-5 lg:col-span-5 md:justify-self-center w-full space-y-4">
+          <aside className="md:col-span-5 lg:col-span-4 md:justify-self-center w-full space-y-4">
             <div className="relative mx-auto max-w-[440px]">
               <div className="pointer-events-none absolute -top-3 -left-2 z-10 tape-strip text-[10px]">◤ OFFICIAL LOGO</div>
               <img
