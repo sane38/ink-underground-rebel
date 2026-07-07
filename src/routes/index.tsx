@@ -272,7 +272,7 @@ function Index() {
               <span className="tape-strip">EST · CR PARK · GK 4</span>
               <span className="font-mono text-[10px] sm:text-xs uppercase tracking-[0.15em] sm:tracking-[0.3em] text-chrome break-words max-w-full">// best tattoo studio · south delhi</span>
             </div>
-            <h1 className="font-heavy text-[13vw] leading-[0.82] text-bone sm:text-[15vw] md:text-[5rem] lg:text-[6rem] xl:text-[7rem] [text-shadow:6px_6px_0_rgba(0,0,0,0.65)] break-words">
+            <h1 className="font-heavy text-[13vw] leading-[0.82] text-bone sm:text-[15vw] md:!text-[4.5rem] lg:!text-[5.25rem] xl:!text-[6rem] [text-shadow:6px_6px_0_rgba(0,0,0,0.65)] md:break-normal break-words">
               INK YOUR
               <br />
               <span className="font-bungee-inline text-blood [text-shadow:4px_4px_0_var(--asphalt),8px_8px_0_var(--acid)] sm:[text-shadow:8px_8px_0_var(--asphalt),12px_12px_0_var(--acid)]">
