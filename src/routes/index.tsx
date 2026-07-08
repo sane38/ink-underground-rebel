@@ -608,7 +608,7 @@ function Index() {
         <div className="pointer-events-none absolute inset-0 opacity-[0.08] texture-halftone" />
         <div className="relative mx-auto grid max-w-7xl gap-10 md:gap-12 px-4 sm:px-6 md:grid-cols-2">
           <div className="min-w-0">
-            <div className="flex items-start gap-4 sm:gap-5">
+            <div className="flex items-center gap-4 sm:gap-5">
               <img
                 src={bookingLogo.url}
                 alt="Nu Skool Tattoos logo"
@@ -616,11 +616,11 @@ function Index() {
                 height={512}
                 loading="lazy"
                 decoding="async"
-                className="shrink-0 w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 object-contain select-none [mix-blend-mode:screen] drop-shadow-[3px_3px_0_var(--asphalt)]"
+                className="shrink-0 w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-36 lg:h-36 object-contain select-none [mix-blend-mode:screen] drop-shadow-[3px_3px_0_var(--asphalt)]"
               />
               <div className="min-w-0 flex-1">
                 <span className="font-mono text-xs uppercase tracking-[0.3em] text-asphalt">// 006 — the consultation</span>
-                <h2 className="mt-3 font-heavy leading-[0.85] text-bone [text-shadow:4px_4px_0_var(--asphalt)] text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl whitespace-nowrap">
+                <h2 className="mt-2 font-heavy leading-[0.85] text-bone [text-shadow:4px_4px_0_var(--asphalt)] text-4xl sm:text-5xl md:text-4xl lg:text-5xl xl:text-6xl whitespace-nowrap">
                   BOOK <span className="font-bungee-shade">SESSION.</span>
                 </h2>
               </div>
