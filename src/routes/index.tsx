@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import logoAsset from "@/assets/nuskool-logo.asset.json";
 import heroImg from "@/assets/hero-tattoo.jpg";
 import heroLogo from "@/assets/nuskool-hero-logo-v2.jpeg.asset.json";
+import bookingLogo from "@/assets/nuskool-booking-logo.jpeg.asset.json";
 import bikerImg from "@/assets/biker.jpg";
 import graffitiWall from "@/assets/graffiti-wall.jpg";
 import akshitAsset from "@/assets/artists/akshit.jpeg.asset.json";
