@@ -1,10 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 import logoAsset from "@/assets/nuskool-logo.asset.json";
-import heroImg from "@/assets/hero-tattoo.jpg";
 import heroLogo from "@/assets/nuskool-hero-logo-v2.jpeg.asset.json";
 import bookingLogo from "@/assets/nuskool-booking-logo.jpeg.asset.json";
-import bikerImg from "@/assets/biker.jpg";
-import graffitiWall from "@/assets/graffiti-wall.jpg";
+
+const heroImg =
+  "https://images.pexels.com/photos/25491869/pexels-photo-25491869/free-photo-of-a-tattoo-artist-at-work.jpeg?auto=compress&cs=tinysrgb&w=1920";
+const bikerImg =
+  "https://images.pexels.com/photos/5192880/pexels-photo-5192880.jpeg?auto=compress&cs=tinysrgb&w=1920";
+const graffitiWall =
+  "https://images.pexels.com/photos/3269629/pexels-photo-3269629.jpeg?auto=compress&cs=tinysrgb&w=1600";
 import akshitAsset from "@/assets/artists/akshit.jpeg.asset.json";
 import chintuAsset from "@/assets/artists/chintu.png.asset.json";
 import mumbaAsset from "@/assets/artists/mumba.jpeg.asset.json";

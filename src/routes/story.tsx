@@ -1,13 +1,24 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, type ReactNode } from "react";
-import heroTattoo from "@/assets/hero-tattoo.jpg";
-import graffitiWall from "@/assets/graffiti-wall.jpg";
-import tatSkull from "@/assets/tat-skull.jpg";
-import tatJapanese from "@/assets/tat-japanese.jpg";
-import tatLettering from "@/assets/tat-lettering.jpg";
-import tatSleeve from "@/assets/tat-sleeve.jpg";
-import tatChest from "@/assets/tat-chest.jpg";
-import tatFineline from "@/assets/tat-fineline.jpg";
+import workSkull from "@/assets/work/work-skull.jpeg.asset.json";
+import workSamurai from "@/assets/work/work-samurai.jpeg.asset.json";
+import workPagoda from "@/assets/work/work-pagoda.jpeg.asset.json";
+import workWheel from "@/assets/work/work-wheel.jpeg.asset.json";
+import workBallerina from "@/assets/work/work-ballerina.jpeg.asset.json";
+import workCompass from "@/assets/work/work-compass.jpeg.asset.json";
+import workDragonWing from "@/assets/work/work-dragon-wing.jpeg.asset.json";
+import workLotus from "@/assets/work/work-lotus.jpeg.asset.json";
+
+const heroTattoo =
+  "https://images.pexels.com/photos/25491869/pexels-photo-25491869/free-photo-of-a-tattoo-artist-at-work.jpeg?auto=compress&cs=tinysrgb&w=1920";
+const graffitiWall =
+  "https://images.pexels.com/photos/3269629/pexels-photo-3269629.jpeg?auto=compress&cs=tinysrgb&w=1600";
+const tatSkull = workSkull.url;
+const tatJapanese = workSamurai.url;
+const tatLettering = workCompass.url;
+const tatSleeve = workPagoda.url;
+const tatChest = workWheel.url;
+const tatFineline = workLotus.url;
 
 export const Route = createFileRoute("/story")({
   head: () => ({
